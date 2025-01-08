@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="header">添加人员信息</view>
+
+  <!-- 人员信息表单 -->
+  <view class="form">
+    <!-- 输入人员姓名 -->
+    <view class="form-item">
+      <text class="label">姓名</text>
+      <input class="input" placeholder="请输入人员姓名" bindinput="onInputChange" data-field="name" />
+    </view>
+
+    <!-- 输入岗位 -->
+    <view class="form-item">
+      <text class="label">岗位</text>
+      <input class="input" placeholder="请输入岗位" bindinput="onInputChange" data-field="position" />
+    </view>
+
+    <!-- 上传健康证 -->
+    <view class="form-item">
+      <text class="label">健康证</text>
+      <button class="upload-btn" bindtap="uploadHealthCertificate">上传健康证</button>
+      <view wx:if="{{healthCertificateUrl}}" class="uploaded-info">
+        <text>已上传</text>
+        <image class="uploaded-image" src="{{healthCertificateUrl}}" mode="aspectFill" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-btn" bindtap="submitPersonnelInfo">
+    <text class="btn-text">提交人员信息</text>
+  </view>
+</view>

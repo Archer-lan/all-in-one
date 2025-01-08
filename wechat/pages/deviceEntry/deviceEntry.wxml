@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">设备入库</view>
+  
+  <view class="form-item">
+    <text class="label">设备名称：</text>
+    <input type="text" placeholder="请输入设备名称" bindinput="onInputChange" data-field="name" class="input" />
+  </view>
+  
+  <view class="form-item">
+    <text class="label">数量：</text>
+    <input type="number" placeholder="请输入数量" bindinput="onInputChange" data-field="quantity" class="input" />
+  </view>
+  
+  <view class="form-item">
+    <text class="label">单价：</text>
+    <input type="number" placeholder="请输入单价" bindinput="onInputChange" data-field="price" class="input" />
+  </view>
+  
+  <view class="form-item">
+    <text class="label">供应商：</text>
+    <input type="text" placeholder="请输入供应商名称" bindinput="onInputChange" data-field="supplier" class="input" />
+  </view>
+  
+  <button class="submit-button" bindtap="onSubmit">提交</button>
+</view>

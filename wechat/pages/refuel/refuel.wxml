@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="header">填写加油信息</view>
+
+  <!-- 加油信息输入表单 -->
+  <view class="form">
+    <view class="form-item">
+      <text class="label">公里数</text>
+      <input class="input" type="number" placeholder="请输入当前公里数" bindinput="onInputChange" data-field="mileage" />
+    </view>
+    <view class="form-item">
+      <text class="label">车牌号</text>
+      <input class="input" placeholder="请输入车牌号" bindinput="onInputChange" data-field="licensePlate" />
+    </view>
+    <view class="form-item">
+      <text class="label">加油人员</text>
+      <input class="input" placeholder="请输入加油人员姓名" bindinput="onInputChange" data-field="refuelPerson" />
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-btn" bindtap="submitRefuelInfo">
+    <text class="btn-text">提交加油信息</text>
+  </view>
+</view>

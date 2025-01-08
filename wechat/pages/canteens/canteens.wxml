@@ -1,0 +1,87 @@
+<view class="container">
+  <!-- 顶部标题 -->
+  <view class="header">
+    <text class="header-text">食堂管理系统</text>
+  </view>
+
+  <!-- 功能模块分组 -->
+  <view class="module-group">
+    <!-- 人员管理 -->
+    <view class="module-section">
+      <text class="section-title">食堂人员管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleStaffManagement">
+          <image src="/img/人员信息.png" class="action-icon"></image>
+          <text class="action-text">人员信息管理</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 采购管理 -->
+    <view class="module-section">
+      <text class="section-title">采购管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handlePurchaseEntry">
+          <image src="/img/采购信息.png" class="action-icon"></image>
+          <text class="action-text">录入采购信息</text>
+        </view>
+        <view class="action-item" bindtap="handlePurchaseReport">
+          <image src="/img/采购报表.png" class="action-icon"></image>
+          <text class="action-text">生成采购报表</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 菜单管理 -->
+    <view class="module-section">
+      <text class="section-title">菜单管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleTodayMenu">
+          <image src="/img/每日备餐.png" class="action-icon"></image>
+          <text class="action-text">当日菜单</text>
+        </view>
+        <view class="action-item" bindtap="handleWeeklyMenu">
+          <image src="/img/本周菜单.png" class="action-icon"></image>
+          <text class="action-text">周菜单</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 餐费管理 -->
+    <view class="module-section">
+      <text class="section-title">餐费管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleConsumptionRecord">
+          <image src="/img/消费记录.png" class="action-icon"></image>
+          <text class="action-text">消费记录查询</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 资产管理 -->
+    <view class="module-section">
+      <text class="section-title">食堂资产</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleAssetCheck">
+          <image src="/img/资产盘点.png" class="action-icon"></image>
+          <text class="action-text">资产盘点</text>
+        </view>
+        <view class="action-item" bindtap="handleAssetReport">
+          <image src="/img/资产报表.png" class="action-icon"></image>
+          <text class="action-text">生成资产报表</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 卫生管理 -->
+    <view class="module-section">
+      <text class="section-title">食堂卫生管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleUploadPhotos">
+          <image src="/img/上传.png" class="action-icon"></image>
+          <text class="action-text">上传卫生照片</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

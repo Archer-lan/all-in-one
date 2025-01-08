@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="header">当日菜单管理</view>
+
+  <!-- 当日菜单输入 -->
+  <view class="menu-form">
+    <view class="form-item">
+      <text class="label">早餐</text>
+      <input class="input" placeholder="请输入早餐内容" bindinput="onInputChange" data-field="breakfast" />
+    </view>
+    <view class="form-item">
+      <text class="label">午餐</text>
+      <input class="input" placeholder="请输入午餐内容" bindinput="onInputChange" data-field="lunch" />
+    </view>
+    <view class="form-item">
+      <text class="label">晚餐</text>
+      <input class="input" placeholder="请输入晚餐内容" bindinput="onInputChange" data-field="dinner" />
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-btn" bindtap="submitDailyMenu">
+    <text class="btn-text">提交当日菜单</text>
+  </view>
+</view>

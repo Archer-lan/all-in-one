@@ -1,0 +1,127 @@
+.container {
+    padding: 20rpx;
+    background-color: #f5f5f5;
+    height: 100vh;
+  }
+  
+  .header {
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20rpx;
+    text-align: center;
+  }
+  
+  .date-picker {
+    background-color: #fff;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+    margin-bottom: 20rpx;
+  }
+  
+  .picker-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20rpx;
+  }
+  
+  .label {
+    font-size: 30rpx;
+    color: #666;
+  }
+  
+  .picker {
+    flex: 1;
+    text-align: right;
+    font-size: 28rpx;
+    color: #007aff;
+    border: 1px solid #ddd;
+    padding: 10rpx;
+    border-radius: 5rpx;
+    background-color: #f9f9f9;
+  }
+  
+  .form {
+    background-color: #fff;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+    margin-bottom: 20rpx;
+  }
+  
+  .form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20rpx;
+  }
+  
+  .input {
+    flex: 1;
+    text-align: right;
+    font-size: 28rpx;
+    color: #333;
+    padding: 10rpx;
+    border: 1px solid #ddd;
+    border-radius: 5rpx;
+    background-color: #f9f9f9;
+  }
+  
+  .search-btn {
+    background-color: #007aff;
+    color: #fff;
+    text-align: center;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2);
+    margin-bottom: 20rpx;
+  }
+  
+  .record-list {
+    background-color: #fff;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+    margin-bottom: 20rpx;
+  }
+  
+  .record-item {
+    margin-bottom: 15rpx;
+    padding: 20rpx;
+    background-color: #f9f9f9;
+    border-left: 5rpx solid #007aff;
+    border-radius: 10rpx;
+    box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .record-item:last-child {
+    margin-bottom: 0; /* 去掉最后一个记录的底部间距 */
+  }
+  
+  .record-info {
+    font-size: 28rpx;
+    color: #333;
+    line-height: 40rpx;
+  }
+  
+  .record-info > text:first-child {
+    font-weight: bold;
+  }
+  
+  .loading-text,
+  .no-data-text {
+    text-align: center;
+    font-size: 28rpx;
+    color: #999;
+    margin-top: 20rpx;
+  }
+  
+  
+  .highlight {
+    color: #007aff;
+    font-weight: bold;
+  }
+  

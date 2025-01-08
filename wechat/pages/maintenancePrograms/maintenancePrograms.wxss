@@ -1,0 +1,66 @@
+.container {
+    padding: 20rpx;
+    background-color: #f5f5f5;
+    height: 100vh;
+  }
+  
+  .header {
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20rpx;
+  }
+  
+  .add-plan {
+    background-color: #007aff;
+    color: #fff;
+    text-align: center;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    margin-bottom: 20rpx;
+  }
+  
+  .plan-list {
+    flex: 1;
+  }
+  
+  .plan-item {
+    background-color: #fff;
+    padding: 20rpx;
+    margin-bottom: 10rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .plan-info {
+    margin-bottom: 10rpx;
+  }
+  
+  .plan-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .plan-date {
+    font-size: 28rpx;
+    color: #666;
+  }
+  
+  .plan-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .edit-btn {
+    color: #007aff;
+    font-size: 28rpx;
+    margin-right: 20rpx;
+  }
+  
+  .delete-btn {
+    color: #ff4d4f;
+    font-size: 28rpx;
+  }
+  

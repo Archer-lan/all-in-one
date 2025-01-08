@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="header">维修费查询</view>
+
+  <!-- 时间段选择 -->
+  <view class="date-picker">
+    <view class="picker-item">
+      <text class="label">开始日期</text>
+      <picker mode="date" bindchange="onStartDateChange">
+        <view class="picker">{{startDate || '请选择开始日期'}}</view>
+      </picker>
+    </view>
+    <view class="picker-item">
+      <text class="label">结束日期</text>
+      <picker mode="date" bindchange="onEndDateChange">
+        <view class="picker">{{endDate || '请选择结束日期'}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 输入车牌号 -->
+  <view class="form">
+    <view class="form-item">
+      <text class="label">车牌号</text>
+      <input class="input" placeholder="请输入车牌号" bindinput="onInputChange" data-field="licensePlate" />
+    </view>
+  </view>
+
+  <!-- 查询按钮 -->
+  <view class="search-btn" bindtap="searchRepairCosts">
+    <text class="btn-text">查询</text>
+  </view>
+
+  <!-- 查询结果 -->
+  <scroll-view class="record-list" scroll-y>
+    <block wx:for="{{repairRecords}}" wx:key="id">
+      <view class="record-item">
+        <text>维修时间：{{item.date}}</text>
+        <text>维修费用：¥{{item.cost}}</text>
+        <text>维修内容：{{item.content}}</text>
+      </view>
+    </block>
+    <view wx:if="{{loading}}" class="loading-text">加载中...</view>
+    <view wx:if="{{repairRecords.length === 0 && !loading}}" class="no-data-text">暂无记录</view>
+  </scroll-view>
+</view>

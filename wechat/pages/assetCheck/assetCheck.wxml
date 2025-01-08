@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="header">资产盘点</view>
+
+  <!-- 添加资产 -->
+  <view class="add-asset" bindtap="addAsset">
+    <text class="add-text">+ 添加资产</text>
+  </view>
+
+  <!-- 资产列表 -->
+  <scroll-view class="asset-list" scroll-y>
+    <block wx:for="{{assets}}" wx:key="id">
+      <view class="asset-item">
+        <view class="asset-info">
+          <text class="asset-name">名称：{{item.name}}</text>
+          <text class="asset-quantity">数量：{{item.quantity}}</text>
+          <text class="asset-value">价值：¥{{item.value}}</text>
+          <text class="asset-condition">状态：{{item.condition}}</text>
+        </view>
+        <view class="asset-actions">
+          <text class="edit-btn" bindtap="editAsset" data-id="{{item.id}}">编辑</text>
+          <text class="delete-btn" bindtap="deleteAsset" data-id="{{item.id}}">删除</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="header">生成报表</view>
+
+  <!-- 选择日期范围 -->
+  <view class="date-picker">
+    <text class="label">开始日期</text>
+    <picker mode="date" value="{{startDate}}" bindchange="onStartDateChange">
+      <view class="picker">{{startDate}}</view>
+    </picker>
+    <text class="label">结束日期</text>
+    <picker mode="date" value="{{endDate}}" bindchange="onEndDateChange">
+      <view class="picker">{{endDate}}</view>
+    </picker>
+  </view>
+
+  <!-- 生成报表按钮 -->
+  <view class="generate-button" bindtap="generateReport">
+    <text class="button-text">生成报表</text>
+  </view>
+</view>

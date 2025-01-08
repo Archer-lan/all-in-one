@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f5f5f5;
+  }
+  
+  .header {
+    background-color: #007aff;
+    color: #fff;
+    text-align: center;
+    padding: 20rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx 20rpx;
+    background-color: #fff;
+    margin-bottom: 10rpx;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .search-input {
+    flex: 1;
+    height: 60rpx;
+    border: 1px solid #ccc;
+    border-radius: 30rpx;
+    padding: 0 20rpx;
+    font-size: 28rpx;
+    margin-right: 10rpx;
+  }
+  
+  .search-filter {
+    width: 60rpx; /* 按钮宽度 */
+    height: 60rpx; /* 按钮高度 */
+    margin-right: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* 移除背景色 */
+    border: none; /* 移除边框 */
+    padding: 0; /* 移除按钮默认内边距 */
+    overflow: visible; /* 确保图片不被裁剪 */
+  }
+  
+  .filter-icon {
+    width: 60rpx; /* 图片宽度与按钮容器一致 */
+    height: 60rpx; /* 图片高度与按钮容器一致 */
+    object-fit: contain; /* 确保图片按比例缩放 */
+  }
+
+  .search-btn {
+    width: 120rpx;
+    height: 60rpx;
+    background-color: #007aff;
+    color: #fff;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius: 30rpx;
+    font-size: 28rpx;
+  } 
+  
+  .item-list {
+    flex: 1;
+    padding: 10rpx;
+    background-color: #f5f5f5;
+    overflow-y: scroll;
+  }
+  
+  .item {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 10rpx;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    box-shadow: 0rpx 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-left {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: #f0f0f0;
+    border-radius: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20rpx;
+  }
+  
+  .placeholder-image {
+    font-size: 20rpx;
+    color: #999;
+  }
+  
+  .item-right {
+    flex: 1;
+  }
+  
+  .item-info {
+    margin-bottom: 10rpx;
+  }
+  
+  .item-name {
+    font-size: 32rpx;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .item-detail {
+    font-size: 28rpx;
+    color: #666;
+  }
+  
+  .item-data text {
+    display: block;
+    font-size: 28rpx;
+    color: #666;
+    margin-bottom: 5rpx;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 20rpx 30rpx; /* 左右增加30rpx的内边距 */
+    text-align: center;
+    border-top: 1px solid #ddd;
+    box-shadow: 0rpx -2rpx 5rpx rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150rpx;
+  }
+  
+  .footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .footer-title {
+    font-size: 28rpx;
+    color: #333;
+    margin-bottom: 5rpx;
+  }
+  
+  .footer-value {
+    font-size: 36rpx;
+    color: #007aff; /* 蓝色字体 */
+    font-weight: bold;
+  } 
+  

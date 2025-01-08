@@ -1,0 +1,31 @@
+<view class="container">
+  <!-- 标题栏 -->
+  <view class="header">
+    <view class="back-button" bindtap="onBack">
+      <image src="/assets/back-icon.png" class="back-icon" />
+    </view>
+    <text class="title">选择仓库</text>
+    <text class="save-button" bindtap="onSave">保存</text>
+  </view>
+
+  <!-- 内容列表 -->
+  <view class="content">
+    <!-- 仓库选择 -->
+    <view class="list-item" bindtap="onSelectWarehouse">
+      <text class="label">仓库</text>
+      <text class="value">{{warehouse}}</text>
+      <image src="/assets/arrow-right.png" class="arrow-icon" />
+    </view>
+    <!-- 商品分类 -->
+    <view class="list-item" bindtap="onSelectCategory">
+      <text class="label">商品分类</text>
+      <text class="value">{{category}}</text>
+      <image src="/assets/arrow-right.png" class="arrow-icon" />
+    </view>
+    <!-- 过滤零库存 -->
+    <view class="list-item">
+      <text class="label">过滤零库存</text>
+      <switch class="switch" checked="{{filterZeroStock}}" bindchange="onSwitchChange" />
+    </view>
+  </view>
+</view>

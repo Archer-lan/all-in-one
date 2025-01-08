@@ -1,0 +1,95 @@
+<view class="container">
+  <!-- 顶部标题 -->
+  <view class="header">
+    <text class="header-text">车辆管理系统</text>
+  </view>
+
+  <!-- 功能模块分组 -->
+  <view class="module-group">
+    <!-- 车辆使用与归还 -->
+    <view class="module-section">
+      <text class="section-title">车辆使用与归还</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleVehicleUse">
+          <image src="/img/已派单.png" class="action-icon"></image>
+          <text class="action-text">填写派车单</text>
+        </view>
+        <view class="action-item" bindtap="handleVehicleReturn">
+          <image src="/img/归还信息.png" class="action-icon"></image>
+          <text class="action-text">填写归还信息</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 车辆加油 -->
+    <view class="module-section">
+      <text class="section-title">车辆加油管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleRefuel">
+          <image src="/img/加油信息.png" class="action-icon"></image>
+          <text class="action-text">填写加油信息</text>
+        </view>
+        <view class="action-item" bindtap="handleReimbursement">
+          <image src="/img/报销单.png" class="action-icon"></image>
+          <text class="action-text">生成报销单</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 维修管理 -->
+    <view class="module-section">
+      <text class="section-title">维修管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleRepairLog">
+          <image src="/img/维修信息.png" class="action-icon"></image>
+          <text class="action-text">登记维修信息</text>
+        </view>
+        <view class="action-item" bindtap="handleRepairReport">
+          <image src="/img/维修报表.png" class="action-icon"></image>
+          <text class="action-text">生成维修报表</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 违章管理 -->
+    <view class="module-section">
+      <text class="section-title">车辆违章管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleViolationQuery">
+          <image src="/img/我的-违章记录.png" class="action-icon"></image>
+          <text class="action-text">查询违章记录</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 车辆查询 -->
+    <view class="module-section">
+      <text class="section-title">车辆查询</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleMileageFuel">
+          <image src="/img/里程油耗.png" class="action-icon"></image>
+          <text class="action-text">里程油耗统计</text>
+        </view>
+        <view class="action-item" bindtap="handleUserMileage">
+          <image src="/img/用车统计报表.png" class="action-icon"></image>
+          <text class="action-text">用车统计报表</text>
+        </view>
+        <view class="action-item" bindtap="handleRepairFeeQuery">
+          <image src="/img/维修费查询.png" class="action-icon"></image>
+          <text class="action-text">维修费查询</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 系统设置 -->
+    <view class="module-section">
+      <text class="section-title">系统设置</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleSystemSettings">
+          <image src="/img/车主管理.png" class="action-icon"></image>
+          <text class="action-text">管理司机与车辆</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

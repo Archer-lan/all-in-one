@@ -1,0 +1,47 @@
+<view class="container">
+  <!-- 顶部标题 -->
+  <view class="header">
+    <text class="header-text">固定资产管理</text>
+  </view>
+
+  <!-- 功能分组 -->
+  <view class="module-group">
+    <!-- 库存管理 -->
+    <view class="module-section">
+      <text class="section-title">库存管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleStockEntry">
+          <image src="/img/入库.png" class="action-icon"></image>
+          <text class="action-text">设备入库</text>
+        </view>
+        <view class="action-item" bindtap="handleStockUsage">
+          <image src="/img/物品领用.png" class="action-icon"></image>
+          <text class="action-text">设备领用</text>
+        </view>
+        <view class="action-item" bindtap="handleStockCheck">
+          <image src="/img/盘点.png" class="action-icon"></image>
+          <text class="action-text">库存盘点</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 维护与维修管理 -->
+    <view class="module-section">
+      <text class="section-title">维护与维修管理</text>
+      <view class="module-actions">
+        <view class="action-item" bindtap="handleMaintenancePlan">
+          <image src="/img/维护计划.png" class="action-icon"></image>
+          <text class="action-text">维护计划</text>
+        </view>
+        <view class="action-item" bindtap="handleRepairRecord">
+          <image src="/img/维护记录.png" class="action-icon"></image>
+          <text class="action-text">维修记录</text>
+        </view>
+        <view class="action-item" bindtap="handleReport">
+          <image src="/img/生产报表.png" class="action-icon"></image>
+          <text class="action-text">生成报表</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

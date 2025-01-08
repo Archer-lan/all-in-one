@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="header">生成报销单</view>
+
+  <!-- 显示已提交加油记录（可选部分，展示最近的加油记录） -->
+  <view class="record-list">
+    <block wx:for="{{refuelRecords}}" wx:key="id">
+      <view class="record-item">
+        <view class="record-info">
+          <text>车牌号：{{item.licensePlate}}</text>
+          <text>公里数：{{item.mileage}}</text>
+          <text>加油人员：{{item.refuelPerson}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 生成报销单按钮 -->
+  <view class="generate-btn" bindtap="generateReimbursement">
+    <text class="btn-text">生成报销单</text>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="header">管理司机与车辆</view>
+
+  <!-- 添加司机与车辆按钮 -->
+  <view class="add-item" bindtap="addDriverVehicle">
+    <text class="add-text">+ 添加司机与车辆</text>
+  </view>
+
+  <!-- 列表展示 -->
+  <scroll-view class="list" scroll-y>
+    <block wx:for="{{driverVehicleList}}" wx:key="id">
+      <view class="list-item">
+        <view class="info">
+          <text>司机姓名：{{item.driver}}</text>
+          <text>车辆型号：{{item.vehicleModel}}</text>
+          <text>车牌号：{{item.licensePlate}}</text>
+          <text>里程数：{{item.mileage}} 公里</text>
+        </view>
+        <view class="actions">
+          <text class="edit-btn" bindtap="editDriverVehicle" data-id="{{item.id}}">编辑</text>
+          <text class="delete-btn" bindtap="deleteDriverVehicle" data-id="{{item.id}}">删除</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

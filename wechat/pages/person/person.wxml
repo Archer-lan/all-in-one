@@ -1,0 +1,21 @@
+<view class="container">
+  <!-- 顶部用户信息 -->
+  <view class="user-info">
+    <image class="avatar" src="/img/默认头像.png" />
+    <view class="name">{{userInfo.name || '微信用户'}}</view>
+    <button class="edit-button" bindtap="editProfile">完善资料</button>
+  </view>
+
+  <!-- 功能模块列表 -->
+  <view class="function-list">
+    <navigator url="/pages/inventory/inventory" class="function-item">
+      <text>库存管理</text>
+    </navigator>
+    <navigator url="/pages/canteen/canteen" class="function-item">
+      <text>食堂管理</text>
+    </navigator>
+    <navigator url="/pages/vehicle/vehicle" class="function-item">
+      <text>车辆管理</text>
+    </navigator>
+  </view>
+</view>

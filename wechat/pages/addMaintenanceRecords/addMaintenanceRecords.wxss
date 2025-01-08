@@ -1,0 +1,72 @@
+.container {
+    padding: 20rpx;
+    background-color: #f5f5f5;
+    height: 100vh;
+  }
+  
+  .header {
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20rpx;
+  }
+  
+  .form {
+    background-color: #fff;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20rpx;
+  }
+  
+  .label {
+    font-size: 30rpx;
+    color: #666;
+    margin-bottom: 10rpx;
+  }
+  
+  .input {
+    padding: 10rpx;
+    border: 1px solid #ddd;
+    border-radius: 5rpx;
+    font-size: 28rpx;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .textarea {
+    padding: 10rpx;
+    border: 1px solid #ddd;
+    border-radius: 5rpx;
+    font-size: 28rpx;
+    color: #333;
+    background-color: #f9f9f9;
+    min-height: 120rpx;
+  }
+  
+  .picker {
+    padding: 10rpx;
+    border: 1px solid #ddd;
+    border-radius: 5rpx;
+    font-size: 28rpx;
+    color: #007aff;
+    background-color: #f9f9f9;
+  }
+  
+  .submit-btn {
+    background-color: #007aff;
+    color: #fff;
+    text-align: center;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    margin-top: 20rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.2);
+  }
+  

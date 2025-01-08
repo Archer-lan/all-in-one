@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="header">填写归还信息</view>
+
+  <!-- 归还信息输入表单 -->
+  <view class="form">
+    <view class="form-item">
+      <text class="label">归还时间</text>
+      <picker mode="date" bindchange="onReturnDateChange">
+        <view class="picker">{{returnDate || '请选择日期'}}</view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">归还公里数</text>
+      <input class="input" type="number" placeholder="请输入公里数" bindinput="onInputChange" data-field="endMileage" />
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-btn" bindtap="submitReturnForm">
+    <text class="btn-text">提交归还信息</text>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header">周菜单管理</view>
+
+  <!-- 周菜单表单 -->
+  <scroll-view class="menu-week-form" scroll-y>
+    <block wx:for="{{weekDays}}" wx:key="day">
+      <view class="form-item">
+        <text class="label">{{item.day}}</text>
+        <input class="input" placeholder="请输入菜单内容" bindinput="onInputChange" data-day="{{item.day}}" />
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-btn" bindtap="submitWeeklyMenu">
+    <text class="btn-text">提交周菜单</text>
+  </view>
+</view>

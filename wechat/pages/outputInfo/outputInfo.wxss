@@ -1,0 +1,145 @@
+/* 容器样式 */
+.container {
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+  
+  /* 标题栏 */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .back-icon {
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .add-icon {
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  /* 查询栏 */
+  .search-bar {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-button {
+    margin-left: 5px;
+    padding: 0 12px;
+    height: 38px;
+    background-color: #007aff;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    line-height: 38px;
+  }
+  
+ /* 时间筛选 */
+.date-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.date-range {
+  display: flex;
+  flex: 1; /* 时间选择框占满剩余宽度 */
+}
+
+.date-item {
+    width: 120px; /* 设置固定宽度 */
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    margin-right: 5px; /* 时间框间距 */
+  }
+  
+.flex-space {
+    flex: 1; /* 占据剩余的空白区域 */
+  }
+
+.filter-button {
+  padding: 0 12px;
+  height: 38px;
+  background-color: #007aff;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  line-height: 38px;
+  white-space: nowrap; /* 避免按钮文字换行 */
+}
+
+  /* 销售单列表 */
+  .sales-list {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sales-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .sales-info {
+    flex: 3;
+  }
+  
+  .customer-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .order-date,
+  .order-id,
+  .product-details {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 3px;
+  }
+  
+  .sales-status {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .status {
+    font-size: 12px;
+    color: #007aff;
+  }
+  
+  .amount {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  

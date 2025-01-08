@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">登记维修信息</view>
+
+  <!-- 维修信息输入表单 -->
+  <view class="form">
+    <view class="form-item">
+      <text class="label">车牌号</text>
+      <input class="input" placeholder="请输入车辆车牌号" bindinput="onInputChange" data-field="licensePlate" />
+    </view>
+    <view class="form-item">
+      <text class="label">维修内容</text>
+      <input class="input" placeholder="请输入维修内容" bindinput="onInputChange" data-field="repairContent" />
+    </view>
+    <view class="form-item">
+      <text class="label">维修费用</text>
+      <input class="input" type="number" placeholder="请输入维修费用" bindinput="onInputChange" data-field="repairCost" />
+    </view>
+    <view class="form-item">
+      <text class="label">送修人员</text>
+      <input class="input" placeholder="请输入送修人员姓名" bindinput="onInputChange" data-field="repairPerson" />
+    </view>
+    <view class="form-item">
+      <text class="label">维修时间</text>
+      <picker mode="date" bindchange="onDateChange">
+        <view class="picker">{{repairDate || '请选择日期'}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-btn" bindtap="submitRepairInfo">
+    <text class="btn-text">提交维修信息</text>
+  </view>
+</view>

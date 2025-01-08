@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="header">维修记录</view>
+
+  <!-- 添加维修记录 -->
+  <view class="add-record" bindtap="addRecord">
+    <text class="add-text">+ 添加维修记录</text>
+  </view>
+
+  <!-- 维修记录列表 -->
+  <scroll-view class="record-list" scroll-y>
+    <block wx:for="{{records}}" wx:key="id">
+      <view class="record-item">
+        <view class="record-info">
+          <text class="record-title">{{item.name}}</text>
+          <text class="record-details">故障描述：{{item.description}}</text>
+          <text class="record-date">维修日期：{{item.date}}</text>
+          <text class="record-cost">维修费用：¥{{item.cost}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="header">生成采购报表</view>
+
+  <!-- 选择日期范围 -->
+  <view class="date-picker">
+    <view class="picker-item">
+      <text class="label">开始日期</text>
+      <picker mode="date" bindchange="onStartDateChange">
+        <view class="picker">{{startDate || '请选择开始日期'}}</view>
+      </picker>
+    </view>
+    <view class="picker-item">
+      <text class="label">结束日期</text>
+      <picker mode="date" bindchange="onEndDateChange">
+        <view class="picker">{{endDate || '请选择结束日期'}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 生成报表按钮 -->
+  <view class="generate-btn" bindtap="generateReport">
+    <text class="btn-text">生成采购报表</text>
+  </view>
+</view>

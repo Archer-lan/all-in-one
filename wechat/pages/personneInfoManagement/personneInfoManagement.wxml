@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">人员信息管理</view>
+
+  <!-- 添加人员按钮 -->
+  <view class="add-person" bindtap="addPerson">
+    <text class="add-text">+ 添加人员</text>
+  </view>
+
+  <!-- 人员列表 -->
+  <scroll-view class="person-list" scroll-y>
+    <block wx:for="{{personnel}}" wx:key="id">
+      <view class="person-item">
+        <view class="person-info">
+          <text class="person-name">{{item.name}}</text>
+          <text class="person-job">岗位：{{item.job}}</text>
+          <text class="person-health">健康证：{{item.healthCert ? '已录入' : '未录入'}}</text>
+        </view>
+        <view class="person-actions">
+          <text class="edit-btn" bindtap="editPerson" data-id="{{item.id}}">编辑</text>
+          <text class="delete-btn" bindtap="deletePerson" data-id="{{item.id}}">删除</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

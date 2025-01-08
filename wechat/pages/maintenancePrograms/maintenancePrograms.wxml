@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="header">维护计划</view>
+
+  <!-- 添加维护计划 -->
+  <view class="add-plan" bindtap="addPlan">
+    <text class="add-text">+ 添加维护计划</text>
+  </view>
+
+  <!-- 维护计划列表 -->
+  <scroll-view class="plan-list" scroll-y>
+    <block wx:for="{{plans}}" wx:key="id">
+      <view class="plan-item">
+        <view class="plan-info">
+          <text class="plan-title">{{item.name}}</text>
+          <text class="plan-date">计划日期：{{item.date}}</text>
+        </view>
+        <view class="plan-actions">
+          <text class="edit-btn" bindtap="editPlan" data-id="{{item.id}}">编辑</text>
+          <text class="delete-btn" bindtap="deletePlan" data-id="{{item.id}}">删除</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

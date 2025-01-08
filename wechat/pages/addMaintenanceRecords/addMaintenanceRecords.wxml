@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="header">添加维修记录</view>
+
+  <!-- 输入设备名称 -->
+  <view class="form">
+    <view class="form-item">
+      <text class="label">设备名称</text>
+      <input class="input" placeholder="请输入设备名称" bindinput="onInputChange" data-field="deviceName" />
+    </view>
+
+    <!-- 输入故障描述 -->
+    <view class="form-item">
+      <text class="label">故障描述</text>
+      <textarea class="textarea" placeholder="请输入设备的故障情况" bindinput="onInputChange" data-field="faultDescription"></textarea>
+    </view>
+
+    <!-- 输入维修过程 -->
+    <view class="form-item">
+      <text class="label">维修过程</text>
+      <textarea class="textarea" placeholder="请输入维修过程" bindinput="onInputChange" data-field="repairProcess"></textarea>
+    </view>
+
+    <!-- 输入维修费用 -->
+    <view class="form-item">
+      <text class="label">维修费用</text>
+      <input class="input" type="number" placeholder="请输入维修费用（元）" bindinput="onInputChange" data-field="repairCost" />
+    </view>
+
+    <!-- 选择维修日期 -->
+    <view class="form-item">
+      <text class="label">维修日期</text>
+      <picker mode="date" bindchange="onDateChange">
+        <view class="picker">{{repairDate || '请选择维修日期'}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-btn" bindtap="submitRepairRecord">
+    <text class="btn-text">提交维修记录</text>
+  </view>
+</view>

@@ -1,0 +1,79 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/deviceEntry/deviceEntry",
+    "pages/newEntry/newEntry",
+    "pages/deviceReceipt/deviceReceipt",
+    "pages/entryInfo/entryInfo",
+    "pages/outputInfo/outputInfo",
+    "pages/stockTaking/stockTaking",
+    "pages/selectWarehouse/selectWarehouse",
+    "pages/canteens/canteens",
+    "pages/vehicles/vehicles",
+    "pages/maintenancePrograms/maintenancePrograms",
+    "pages/maintenanceRecords/maintenanceRecords",
+    "pages/generateReports/generateReports",
+    "pages/personneInfoManagement/personneInfoManagement",
+    "pages/enteringPurchaseInformation/enteringPurchaseInformation",
+    "pages/generateProcurementReports/generateProcurementReports",
+    "pages/menuOfTheDay/menuOfTheDay",
+    "pages/weeklyMenu/weeklyMenu",
+    "pages/consumptionRecordInquiry/consumptionRecordInquiry",
+    "pages/assetCheck/assetCheck",
+    "pages/assetReport/assetReport",
+    "pages/uploadPhotos/uploadPhotos",
+    "pages/vehicleUse/vehicleUse",
+    "pages/vehicleReturn/vehicleReturn",
+    "pages/refuel/refuel",
+    "pages/reimbursement/reimbursement",
+    "pages/repairLog/repairLog",
+    "pages/repairReport/repairReport",
+    "pages/violationQuery/violationQuery",
+    "pages/mileageFuel/mileageFuel",
+    "pages/userMileage/userMileage",
+    "pages/repairFeeQuery/repairFeeQuery",
+    "pages/systemSettings/systemSettings",
+    "pages/addMaintenancePlan/addMaintenancePlan",
+    "pages/addMaintenanceRecords/addMaintenanceRecords",
+    "pages/addPerson/addPerson",
+    "pages/person/person"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "西藏智麦信息科技有限责任公司",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "white",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "资产",
+        "iconPath": "img/仓库_库存.png",
+        "selectedIconPath": "img/仓库_库存.png"
+      },
+      {
+        "pagePath": "pages/canteens/canteens",
+        "text": "食堂",
+        "iconPath": "img/食堂.png",
+        "selectedIconPath": "img/食堂.png"
+      },
+      {
+        "pagePath": "pages/vehicles/vehicles",
+        "text": "车辆",
+        "iconPath": "img/车辆.png",
+        "selectedIconPath": "img/车辆.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "img/icon/person01.png",
+        "selectedIconPath": "img/icon/person02.png"
+      }
+    ]
+  }
+}

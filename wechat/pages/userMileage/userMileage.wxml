@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">用车统计报表</view>
+
+  <!-- 输入使用人 -->
+  <view class="form">
+    <view class="form-item">
+      <text class="label">使用人</text>
+      <input class="input" placeholder="请输入使用人姓名" bindinput="onInputChange" data-field="user" />
+    </view>
+  </view>
+
+  <!-- 查询按钮 -->
+  <view class="search-btn" bindtap="searchUsageStats">
+    <text class="btn-text">查询</text>
+  </view>
+
+  <!-- 查询结果 -->
+  <view class="result" wx:if="{{usageData}}">
+    <view class="summary">
+      <text>用车次数：<text class="highlight">{{usageData.times}}</text> 次</text>
+      <text>总公里数：<text class="highlight">{{usageData.totalMileage}}</text> 公里</text>
+    </view>
+    <view class="detail-list">
+      <block wx:for="{{usageData.records}}" wx:key="id">
+        <view class="detail-item">
+          <text>用车时间：{{item.date}}</text>
+          <text>公里数：{{item.mileage}} 公里</text>
+          <text>用车原因：{{item.reason}}</text>
+        </view>
+      </block>
+    </view>
+    <button class="generate-btn" bindtap="generateUsageReport">生成报表</button>
+  </view>
+</view>

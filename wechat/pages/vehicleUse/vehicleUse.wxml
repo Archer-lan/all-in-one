@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">填写派车单</view>
+
+  <!-- 派车单输入表单 -->
+  <view class="form">
+    <view class="form-item">
+      <text class="label">用车人</text>
+      <input class="input" placeholder="请输入用车人姓名" bindinput="onInputChange" data-field="user" />
+    </view>
+    <view class="form-item">
+      <text class="label">司机</text>
+      <input class="input" placeholder="请输入司机姓名" bindinput="onInputChange" data-field="driver" />
+    </view>
+    <view class="form-item">
+      <text class="label">出车公里数</text>
+      <input class="input" type="number" placeholder="请输入公里数" bindinput="onInputChange" data-field="startMileage" />
+    </view>
+    <view class="form-item">
+      <text class="label">用车原因</text>
+      <input class="input" placeholder="请输入用车原因" bindinput="onInputChange" data-field="reason" />
+    </view>
+    <view class="form-item">
+      <text class="label">用车时间</text>
+      <picker mode="date" bindchange="onDateChange">
+        <view class="picker">{{useDate || '请选择日期'}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class="submit-btn" bindtap="submitDispatchForm">
+    <text class="btn-text">提交派车单</text>
+  </view>
+</view>

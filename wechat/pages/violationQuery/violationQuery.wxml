@@ -1,0 +1,40 @@
+<view class="container">
+  <view class="header">查询违章记录</view>
+
+  <!-- 时间段选择 -->
+  <view class="date-picker">
+    <view class="picker-item">
+      <text class="label">开始日期</text>
+      <picker mode="date" bindchange="onStartDateChange">
+        <view class="picker">{{startDate || '请选择开始日期'}}</view>
+      </picker>
+    </view>
+    <view class="picker-item">
+      <text class="label">结束日期</text>
+      <picker mode="date" bindchange="onEndDateChange">
+        <view class="picker">{{endDate || '请选择结束日期'}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 查询按钮 -->
+  <view class="search-btn" bindtap="searchViolationRecords">
+    <text class="btn-text">查询违章记录</text>
+  </view>
+
+  <!-- 违章记录列表 -->
+  <scroll-view class="record-list" scroll-y>
+    <block wx:for="{{violationRecords}}" wx:key="id">
+      <view class="record-item">
+        <view class="record-info">
+          <text>违章时间：{{item.time}}</text>
+          <text>车牌号：{{item.licensePlate}}</text>
+          <text>司机姓名：{{item.driver}}</text>
+          <text>违章内容：{{item.violation}}</text>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{loading}}" class="loading-text">加载中...</view>
+    <view wx:if="{{violationRecords.length === 0 && !loading}}" class="no-data-text">暂无记录</view>
+  </scroll-view>
+</view>

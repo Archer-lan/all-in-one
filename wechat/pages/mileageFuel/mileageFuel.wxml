@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="header">里程油耗统计</view>
+
+  <!-- 输入车牌号 -->
+  <view class="form">
+    <view class="form-item">
+      <text class="label">车牌号</text>
+      <input class="input" placeholder="请输入车牌号" bindinput="onInputChange" data-field="licensePlate" />
+    </view>
+  </view>
+
+  <!-- 查询按钮 -->
+  <view class="search-btn" bindtap="searchMileageAndFuel">
+    <text class="btn-text">查询</text>
+  </view>
+
+  <!-- 查询结果 -->
+  <view class="result" wx:if="{{mileageData}}">
+    <text>总里程数：{{mileageData.totalMileage}} 公里</text>
+    <text>总油耗：{{mileageData.totalFuel}} 升</text>
+    <text>平均油耗：{{mileageData.avgFuelConsumption}} 升/百公里</text>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">
+    <text class="title">设备入库</text>
+  </view>
+  <view class="form">
+    <!-- 供应商 -->
+    <view class="form-item">
+      <text class="label">供应商</text>
+      <view class="input-box" bindtap="chooseSupplier">{{supplier || '请选择供应商'}}</view>
+    </view>
+    <!-- 设备名称 -->
+    <view class="form-item">
+      <text class="label">设备名称</text>
+      <input class="input" placeholder="请输入设备名称" bindinput="onInput" data-field="deviceName" />
+    </view>
+    <!-- 数量 -->
+    <view class="form-item">
+      <text class="label">数量</text>
+      <input class="input" type="number" placeholder="请输入数量" bindinput="onInput" data-field="quantity" />
+    </view>
+    <!-- 单价 -->
+    <view class="form-item">
+      <text class="label">单价</text>
+      <input class="input" type="number" placeholder="请输入单价" bindinput="onInput" data-field="price" />
+    </view>
+    <!-- 单据日期 -->
+    <view class="form-item">
+      <text class="label">单据日期</text>
+      <view class="input-box">{{currentDate}}</view>
+    </view>
+  </view>
+  <!-- 操作 -->
+  <button class="submit-btn" bindtap="submitForm">提交入库</button>
+</view>

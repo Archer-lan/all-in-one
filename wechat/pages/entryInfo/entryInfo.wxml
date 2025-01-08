@@ -1,0 +1,45 @@
+<view class="container">
+  <!-- 标题和右上角加号 -->
+  <view class="header">
+    <view class="back-icon" bindtap="goBack">⬅</view>
+    <text class="title">设备入库·</text>
+    <view class="add-icon" bindtap="onAdd">➕</view>
+  </view>
+
+  <!-- 查询栏 -->
+  <view class="search-bar">
+    <input class="search-input" placeholder="输入商品名称或单据编号" bindinput="onSearchInput" />
+    <button class="search-button" bindtap="onSearch">搜索</button>
+  </view>
+
+  <!-- 时间筛选 -->
+  <view class="date-filter">
+    <picker mode="date" value="{{startDate}}" bindchange="onStartDateChange">
+      <view class="date-item">{{startDate}}</view>
+    </picker>
+    <text>~</text>
+    <picker mode="date" value="{{endDate}}" bindchange="onEndDateChange">
+      <view class="date-item">{{endDate}}</view>
+    </picker>
+    <view class="flex-space"></view> <!-- 增加空白区域 -->
+    <button class="filter-button" bindtap="onFilter">筛选</button>
+  </view>
+
+  <!-- 销售单列表 -->
+  <view class="sales-list">
+    <block wx:for="{{sales}}" wx:key="index">
+      <view class="sales-item">
+        <view class="sales-info">
+          <text class="customer-name">{{item.customerName}}</text>
+          <text class="order-date">订单日期：{{item.orderDate}}</text>
+          <text class="order-id">{{item.orderId}}</text>
+          <text class="product-details">{{item.products}}</text>
+        </view>
+        <view class="sales-status">
+          <text class="status">{{item.status}}</text>
+          <text class="amount">¥{{item.amount}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

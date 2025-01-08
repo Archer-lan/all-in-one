@@ -1,0 +1,50 @@
+<view class="container">
+  <!-- Header -->
+  <view class="header">
+    <text class="title">库存盘点</text>
+  </view>
+
+  <!-- 搜索框 -->
+<view class="search-bar">
+  <view class="search-filter" bindtap="onFilter">
+    <image src="/img/filter.png" class="filter-icon" />
+  </view>
+  <input class="search-input" placeholder="编号、名称、条形码、规格" bindinput="onSearchInput" />
+  <button class="search-btn" bindtap="onSearch">搜索</button>
+ </view>
+
+
+  <!-- 列表 -->
+  <scroll-view class="item-list" scroll-y>
+    <block wx:for="{{items}}" wx:key="id">
+      <view class="item">
+        <view class="item-left">
+          <view class="placeholder-image">NO IMAGE</view>
+        </view>
+        <view class="item-right">
+          <view class="item-info">
+            <text class="item-name">{{item.name}}</text>
+            <text class="item-detail">规格：{{item.spec}} 品牌：{{item.brand}} 单位：{{item.unit}}</text>
+          </view>
+          <view class="item-data">
+            <text>仓库：{{item.location}}</text>
+            <text>库存：{{item.stock}}</text>
+            <text>进价：¥{{item.costPrice}} 批发：¥{{item.wholesalePrice}} 零售：¥{{item.retailPrice}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 底部统计 -->
+  <view class="footer">
+    <view class="footer-item">
+      <text class="footer-title">库存总数</text>
+      <text class="footer-value">{{totalStock}}</text>
+    </view>
+    <view class="footer-item">
+      <text class="footer-title">库存总额</text>
+      <text class="footer-value">¥{{totalAmount}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,79 @@
+.container {
+    padding: 20rpx;
+    background-color: #f5f5f5;
+    height: 100vh;
+  }
+  
+  .header {
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20rpx;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx 20rpx;
+    background-color: #fff;
+    margin-bottom: 10rpx;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .search-input {
+    flex: 1;
+    height: 60rpx;
+    border: 1px solid #ccc;
+    border-radius: 30rpx;
+    padding: 0 20rpx;
+    font-size: 28rpx;
+    margin-right: 10rpx;
+  }
+  
+  .search-btn {
+    width: 120rpx;
+    height: 60rpx;
+    background-color: #007aff;
+    color: #fff;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius: 30rpx;
+    font-size: 28rpx;
+  }
+  
+  .record-list {
+    flex: 1;
+    background-color: #fff;
+    padding: 10rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .record-item {
+    background-color: #fff;
+    padding: 20rpx;
+    margin-bottom: 10rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .record-info {
+    font-size: 28rpx;
+    color: #333;
+  }
+  
+  .record-name,
+  .record-date,
+  .record-amount,
+  .record-detail {
+    margin-bottom: 5rpx;
+  }
+  
+  .loading-text {
+    text-align: center;
+    font-size: 28rpx;
+    color: #999;
+    margin: 20rpx 0;
+  }
+  

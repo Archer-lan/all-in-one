@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="header">食堂卫生管理</view>
+
+  <!-- 上传照片按钮 -->
+  <view class="upload-section">
+    <button class="upload-btn" bindtap="chooseImage">上传照片</button>
+  </view>
+
+  <!-- 照片展示列表 -->
+  <scroll-view class="photo-list" scroll-y>
+    <block wx:for="{{photos}}" wx:key="id">
+      <view class="photo-item">
+        <image class="photo" src="{{item.url}}" mode="aspectFill" />
+        <view class="photo-actions">
+          <text class="delete-btn" bindtap="deletePhoto" data-id="{{item.id}}">删除</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
