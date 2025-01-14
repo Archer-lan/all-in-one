@@ -1,47 +1,36 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../config/db");
 
-const User = sequelize.define(
-  "User",
+const Car = sequelize.define(
+  "Car",
   {
-    userid: {
+    car_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       unique: true,
       allowNull: false,
     },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
-    },
-    password: {
+    license_plate: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    telephone: {
+    model: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    permission: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    create_time: {
+    total_male: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    use_state: {
-      type: DataTypes.STRING,
+    status: {
+      type: DataTypes.ENUM("available", "in_use", "under_maintenance"),
       allowNull: false,
     },
   },
   {
-    tableName: "user",
+    tableName: "car",
   }
 );
 
-module.exports = User;
+module.exports = Car;

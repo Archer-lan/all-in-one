@@ -3,7 +3,9 @@ const cors = require("cors");
 require("dotenv").config();
 
 const { connectDB } = require("./src/config/db");
-const indexRouter = require("./src/routes/index");
+const userRouter = require("./src/routes/userRouter");
+const carRouter = require("./src/routes/carRouter");
+const driverRouter = require("./src/routes/driverRouter");
 const errorHandler = require("./src/middleware/errorHandler");
 
 // 连接数据库
@@ -17,7 +19,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // 路由
-app.use("/api", indexRouter);
+app.use("/api", userRouter);
+app.use("/api", carRouter);
+app.use("/api", driverRouter);
 
 app.get("/", (req, res) => {
   res.json({ message: "欢迎使用 Express API" });

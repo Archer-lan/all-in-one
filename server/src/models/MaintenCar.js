@@ -1,47 +1,44 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../config/db");
 
-const User = sequelize.define(
-  "User",
+const MaintenCar = sequelize.define(
+  "MaintenCar",
   {
-    userid: {
+    maintanance_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       unique: true,
       allowNull: false,
     },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    telephone: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    permission: {
+    car_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    create_time: {
+    maintenance_time: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    use_state: {
+    repair_details: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    status: {
+      type: DataTypes.ENUM,
+      allowNull: false,
+    },
+    technician_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    completed_time: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
   },
   {
-    tableName: "user",
+    tableName: "maintenance_records",
   }
 );
 
-module.exports = User;
+module.exports = MaintenCar;
